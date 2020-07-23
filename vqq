@@ -1,0 +1,28 @@
+
+[1mFrom:[0m /home/slayzan/Documents/Morpion/lib/Show.rb:19 Application#perform:
+
+     [1;34m3[0m: [32mdef[0m [1;34mperform[0m
+     [1;34m4[0m:    puts [31m[1;31m"[0m[31mBienvenue sur le jeu du morpion[1;35m\n[0m[31m[1;31m"[0m[31m[0m
+     [1;34m5[0m:    puts [31m[1;31m"[0m[31mVeuillez indiquer le  nom du premier joueur[1;35m\n[0m[31m[1;31m"[0m[31m[0m
+     [1;34m6[0m:    nom1 = gets.chomp
+     [1;34m7[0m:    puts [31m[1;31m"[0m[31mVeuillez indiquer le  nom du deuxieme joueur[1;35m\n[0m[31m[1;31m"[0m[31m[0m
+     [1;34m8[0m:    nom2 = gets.chomp
+     [1;34m9[0m:    game = [1;34;4mGame[0m.new(nom1,nom2)
+    [1;34m10[0m:    puts [31m[1;31m"[0m[31mbien la partie vas commencer[1;31m"[0m[31m[0m
+    [1;34m11[0m:    game.show_board_start
+    [1;34m12[0m:    still_going = [1;36mtrue[0m
+    [1;34m13[0m:    [32mwhile[0m still_going
+    [1;34m14[0m:       puts [31m[1;31m"[0m[31mle joueur 1 choisie une case[1;31m"[0m[31m[0m
+    [1;34m15[0m:       game.board.fillCase(gets.chomp)
+    [1;34m16[0m:       game.show_board
+    [1;34m17[0m:       [32mif[0m game.board.turncount >= [1;34m3[0m
+    [1;34m18[0m:         still_going = game.is_still_going?
+ => [1;34m19[0m:         binding.pry
+    [1;34m20[0m:       [32mend[0m
+    [1;34m21[0m:       puts [31m[1;31m"[0m[31mle joueur 2 choisie une case[1;31m"[0m[31m[0m
+    [1;34m22[0m:       game.board.fillCase(gets.chomp)
+    [1;34m23[0m:       game.show_board
+    [1;34m24[0m:    
+    [1;34m25[0m:    [32mend[0m
+    [1;34m26[0m: [32mend[0m
+
