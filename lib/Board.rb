@@ -20,33 +20,28 @@ class Board
 		puts @turncount
 		if @turncount.even?
 			@boardcase.map do |num|
-				if casechoose == num.id
-					if num.value == ' '
+				if casechoose == num.id && num.value == ' '
 						num.value = "x"
 						@turncount +=1
-						find = 1	
-					end
-					else
-						puts 'veuilliez choisir une case libre'
+						find = 1
+						return true
 				end
 			end
 			puts 'erreur veuilliez choisir une case valide' if find == 0
+			return false
 		else
 			@boardcase.map do |num|
-			if casechoose == num.id
-				if num.value == ' '
-					num.value = "o"
-					@turncount +=1
-					find = 1
+				if casechoose == num.id && num.value == ' '
+						num.value = "o"
+						@turncount +=1
+						find = 1
+						return true
 				end
-				else
-					puts 'veuilliez choisir une case libre'
 			end
-			end
-			puts "erreur veuilliez choisir une case valide" if find == 0
+				puts "erreur veuilliez choisir une case valide" if find == 0
+				return false
 		end
-	end
-
+end
 	def compare?(t1, t2, t3)
 		if @boardcase[t1].value == @boardcase[t2].value && @boardcase[t1].value == @boardcase[t3].value && @boardcase[t2].value == @boardcase[t3].value
 			if  @boardcase[t1].value == 'x' || @boardcase[t1].value == 'o'
