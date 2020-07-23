@@ -15,14 +15,14 @@ class Application
          game.board.fillCase(gets.chomp)
          game.show_board
          if game.board.turncount >= 3
-           break if !game.is_still_going?
+          break if !game.is_still_going?
          end
          puts "le joueur 2 choisie une case"
          game.board.fillCase(gets.chomp)
          game.show_board
          if game.board.turncount >= 3
             break if !game.is_still_going?
-          end     
+           end
       end
    end
 end

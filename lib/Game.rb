@@ -34,7 +34,10 @@ class Game
    end
 
    def is_still_going?
-      return board.check_win
+      
+      value = board.check_win
+      #pp "value est egale #{value}"
+      return value
       true
    end
 end
